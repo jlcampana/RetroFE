@@ -1,2 +1,3 @@
-Sega Genesis
+CPS3
+Taito Type X
 Arcade
