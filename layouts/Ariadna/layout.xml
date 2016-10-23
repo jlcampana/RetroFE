@@ -1,0 +1,108 @@
+<layout width="1920" height="1080" font="Aurora_black.ttf" loadFontSize="50" fontColor="3e3f41">
+
+<!------------->
+<!-- SONIDOS -->
+<!------------->
+
+<sound type="load" src="load.wav" />
+<sound type="highlight" src="highlight.wav" />
+<sound type="select" src="select.wav" />
+<sound type="unload" src="unload.wav" />
+
+<!----------->
+<!-- FONDO -->
+<!----------->
+
+<image src="background.png" x="0" y="0" height="stretch" width="stretch" layer="0"/>
+
+<!---------->
+<!-- HORA -->
+<!---------->
+
+<reloadableText type="time" timeFormat="%H:%M" x="1870" y="70" xOrigin="right" yOrigin="center" font="Aurora_black.ttf" fontSize="62" fontColor="595758" algorithm="easeincircular" layer="9">
+  <onEnter><set duration=".4"><animate type="alpha" from="0" to="1" algorithm="easeinquadratic"/><animate type="xoffset" from="-20" to="0" algorithm="easeinquadratic"/></set></onEnter>
+  <onExit><set duration=".4"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onExit>
+</reloadableText>
+
+<!----------->
+<!-- FECHA -->
+<!----------->
+
+<reloadableText type="time" textFormat="uppercase" timeFormat="%d/%m/%y" x="1870" y="110" xOrigin="right" yOrigin="center" font="Aurora_light.ttf" algorithm="easeincircular" fontSize="30" fontColor="595758" layer="9">
+  <onEnter><set duration=".4"><animate type="alpha" from="0" to="1" algorithm="easeinquadratic"/><animate type="xoffset" from="-80" to="0" algorithm="easeinquadratic"/></set></onEnter>
+  <onExit><set duration=".4"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onExit>
+</reloadableText>
+
+<!---------------------------->
+<!-- IMAGEN DE LA COLECCIÓN -->
+<!---------------------------->
+
+<reloadableImage mode="layout" type="device" alpha="0" x="1300" y="center" yOrigin="center" xOrigin="center" alpha="0" width="1000" layer="1">
+  <onEnter><set duration=".8"><animate type="alpha" to=".2" algorithm="easeinquadratic"/></set></onEnter>
+  <onExit><set duration=".4"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onExit>
+  <onMenuEnter menuIndex="0"><set duration=".4"><animate type="alpha" to=".2" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onMenuExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+  <onHighlightEnter menuIndex="0"><set duration=".2"><animate type="alpha" to=".2" algorithm="easeinquadratic"/></set></onHighlightEnter>
+  <onHighlightExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onHighlightExit>
+</reloadableImage>
+
+<!---------------------------->
+<!-- COLECCIÓN SELECCIONADA -->
+<!---------------------------->
+
+<reloadableImage mode="layout" type="controller" x="450" y="center" yOrigin="center" xOrigin="center" alpha="0" width="256" layer="9">
+  <onEnter><set duration=".8"><animate type="alpha" from="0" to="1"/><animate type="width" from="270" to="256"/></set></onEnter>
+  <onExit><set duration=".4"><animate type="alpha" to="0"/></set></onExit>
+  <onMenuEnter menuIndex="0"><set duration=".4"><animate type="alpha" to="1"/><animate type="width" from="200" to="256"/></set></onMenuEnter>
+  <onMenuExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0"/><animate type="width" from="256" to="200"/></set></onMenuExit>
+  <onHighlightEnter menuIndex="0"><set duration=".2"><animate type="alpha" to="1"/><animate type="width" from="200" to="256"/></set></onHighlightEnter>
+  <onHighlightExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0"/><animate type="width" from="256" to="200"/></set></onHighlightExit>
+</reloadableImage>
+
+<!--------------------------------------->
+<!-- RUEDA DE LOGOTIPOS DE COLECCIONES -->
+<!--------------------------------------->
+
+<menu type="custom" mode="layout" imageType="logo" scrollTime=".4" scrollAcceleration=".04" orientation="vertical">
+  <itemDefaults x="365" y="center"  xOrigin="left" yOrigin="center" width="180" maxheight="224" spacing="10" layer="2"/>
+    <item xOffset="-255" yOffset="-650" angle="-40" alpha="0"/><!-- Elemento 01 -->
+    <item xOffset="-155" yOffset="-500" angle="-30" alpha=".05"><!-- Elemento 02 -->
+      <onEnter><set duration=".4"><animate type="alpha" from="0" to=".05"/></set></onEnter>
+      <onExit><set duration=".2"><animate type="alpha" to="0"/></set></onExit>
+      <onMenuEnter menuIndex="0"><set duration=".4"><animate type="alpha" from="0" to=".05"/></set></onMenuEnter>
+      <onMenuExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0"/></set></onMenuExit>
+    </item>
+    <item xOffset="-85" yOffset="-350" angle="-20" alpha=".1"> <!-- Elemento 03 -->
+      <onEnter><set duration=".2"><animate type="alpha" from="0" to=".1"/></set></onEnter>
+      <onExit><set duration=".2"><animate type="alpha" to="0"/></set></onExit>
+      <onMenuEnter menuIndex="0"><set duration=".4"><animate type="alpha" from="0" to=".075"/></set></onMenuEnter>
+      <onMenuExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0"/></set></onMenuExit>
+    </item>
+    <item xOffset="-35" yOffset="-200" angle="-10" alpha=".15"> <!-- Elemento 04 -->
+      <onEnter><set duration=".4"><animate type="alpha" from="0" to=".15"/></set></onEnter>
+      <onExit><set duration=".2"><animate type="alpha" to="0"/></set></onExit>
+      <onMenuEnter menuIndex="0"><set duration=".4"><animate type="alpha" from="0" to=".1"/></set></onMenuEnter>
+      <onMenuExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0"/></set></onMenuExit>
+    </item>
+    <item selected="true" alpha="0"/> <!-- Elemento invisible -->
+    <item xOffset="-35" yOffset="200" angle="10" alpha=".15"> <!-- Elemento 05 -->
+      <onEnter><set duration=".4"><animate type="alpha" from="0" to=".15"/></set></onEnter>
+      <onExit><set duration=".2"><animate type="alpha" to="0"/></set></onExit>
+      <onMenuEnter menuIndex="0"><set duration=".4"><animate type="alpha" from="0" to=".1"/></set></onMenuEnter>
+      <onMenuExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0"/></set></onMenuExit>
+    </item>
+    <item xOffset="-85" yOffset="350" angle="20" alpha=".1"> <!-- Elemento 06 -->
+      <onEnter><set duration=".4"><animate type="alpha" from="0" to=".1"/></set></onEnter>
+      <onExit><set duration=".2"><animate type="alpha" to="0"/></set></onExit>
+      <onMenuEnter menuIndex="0"><set duration=".4"><animate type="alpha" from="0" to=".075"/></set></onMenuEnter>
+      <onMenuExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0"/></set></onMenuExit>
+    </item>
+    <item xOffset="-145" yOffset="500" angle="30" alpha=".05"> <!-- Elemento 04 -->
+      <onEnter><set duration=".4"><animate type="alpha" from="0" to=".05"/></set></onEnter>
+      <onExit><set duration=".2"><animate type="alpha" to="0"/></set></onExit>
+      <onMenuEnter menuIndex="0"><set duration=".4"><animate type="alpha" from="0" to=".05"/></set></onMenuEnter>
+      <onMenuExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0"/></set></onMenuExit>
+    </item>
+    <item xOffset="-235" yOffset="650" angle="40" alpha="0"/>
+    </menu>
+</layout>

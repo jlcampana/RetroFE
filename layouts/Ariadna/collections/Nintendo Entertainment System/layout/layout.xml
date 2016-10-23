@@ -1,0 +1,183 @@
+﻿<layout width="1920" height="1080" font="Aurora_black.ttf" loadFontSize="50" fontColor="3e3f41">
+
+<!------------->
+<!-- SONIDOS -->
+<!------------->
+
+<sound type="load" src="load.wav" />
+<sound type="highlight" src="highlight.wav" />
+<sound type="select" src="select.wav" />
+<sound type="unload" src="unload.wav" />
+
+<!----------->
+<!-- FONDO -->
+<!----------->
+
+<image src="background.png" x="0" y="0" height="stretch" width="stretch" layer="0"/>
+
+<!---------->
+<!-- HORA -->
+<!---------->
+
+<reloadableText type="time" timeFormat="%H:%M" x="1870" y="70" xOrigin="right" yOrigin="center" font="Aurora_black.ttf" fontSize="62" fontColor="595758" algorithm="easeincircular" layer="9">
+</reloadableText>
+
+<!----------->
+<!-- FECHA -->
+<!----------->
+
+<reloadableText type="time" textFormat="uppercase" timeFormat="%d/%m/%y" x="1870" y="110" xOrigin="right" yOrigin="center" font="Aurora_light.ttf" algorithm="easeincircular" fontSize="30" fontColor="595758" layer="9">
+</reloadableText>
+
+<!------------------------------------------------------------------------->
+<!-- MENU SECUNDARIO: SELECCIÓN DE JUEGO----------------------------------->
+<!------------------------------------------------------------------------->
+
+<!---------------------------->
+<!-- NOMBRE DE LA COLECCION -->
+<!---------------------------->
+
+<reloadableText mode="systemlayout" type="collectionName" x="45" y="70" xOrigin="left" yOrigin="center" alpha="0" font="Aurora_black.ttf" fontSize="62" fontColor="222524" layer="12">
+  <onEnter><set duration=".3"><animate type="alpha" from="0" to=".6" algorithm="easeinquadratic"/><animate type="yoffset" from="-50" to="0" algorithm="easeinquadratic"/></set></onEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="yoffset" from="0" to="0" algorithm="easeinquadratic"/></set></onExit>
+</reloadableText>
+
+<!---------------------->
+<!-- NUMERO DE JUEGOS -->
+<!---------------------->
+
+<text value="GAME" x="45" y="110" xOrigin="left" yOrigin="center" alpha="0" font="Aurora_light.ttf" fontSize="30" fontColor="595758" layer="12">
+  <onEnter><set duration=".3"><animate type="alpha" from="0" to="1" algorithm="easeinquadratic"/><animate type="yoffset" from="-50" to="0" algorithm="easeinquadratic"/></set></onEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="yoffset" from="0" to="0" algorithm="easeinquadratic"/></set></onExit>
+</text>
+<reloadableText type="collectionIndexSize" x="125" y="110" xOrigin="left" alpha="0" yOrigin="center" font="Aurora_light.ttf" fontSize="30" fontColor="595758" layer="12">
+  <onEnter><set duration=".3"><animate type="alpha" from="0" to="1" algorithm="easeinquadratic"/><animate type="yoffset" from="-50" to="0" algorithm="easeinquadratic"/></set></onEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="yoffset" from="0" to="0" algorithm="easeinquadratic"/></set></onExit>
+</reloadableText>
+
+<!------------------------------->
+<!-- NOMBRE DEL JUEGO -->
+<!------------------------------->
+
+<reloadableText mode="layout" type="title" x="center" y="1000" xOrigin="center" yOrigin="center" alpha="0" font="Aurora_condblack.ttf" fontSize="55" fontColor="595758" layer="12">
+  <onEnter><set duration=".3"><animate type="alpha" to="1" algorithm="easeinquadratic"/><animate type="yoffset" from="50" to="0" algorithm="easeinquadratic"/></set></onEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="yoffset" from="0" to="0" algorithm="easeinquadratic"/></set></onExit>
+</reloadableImage>
+
+<!------------------------------------>
+<!-- IMAGEN DEL NUMERO DE JUGADORES -->
+<!------------------------------------>
+
+<reloadableText mode="commonlayout" type="numberPlayers" alpha="0" x="91" y="1000" yOrigin="center" xOrigin="center" font="Aurora_condblack.ttf" fontSize="38" fontColor="dfdbdc" alpha="0" layer="12">
+  <onEnter><set duration=".3"><animate type="alpha" to="1" algorithm="easeinquadratic"/><animate type="yoffset" from="50" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="yoffset" from="0" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+</reloadableText>
+<image src="players.png" alpha="0" x="90" y="1005" yOrigin="center" xOrigin="center" alpha="0" layer="11">
+  <onEnter><set duration=".3"><animate type="alpha" to="1" algorithm="easeinquadratic"/><animate type="yoffset" from="50" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="yoffset" from="0" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+</Image>
+
+<!--------------------------------->
+<!-- IMAGEN DEL GENERO DEL JUEGO -->
+<!--------------------------------->
+
+<reloadableImage mode="commonlayout" type="genre" x="200" y="1002" xOrigin="center" yOrigin="center" maxHeight="60" alpha="0" layer="12">
+  <onEnter><set duration=".3"><animate type="alpha" to="1" algorithm="easeinquadratic"/><animate type="yoffset" from="50" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="yoffset" from="0" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+</reloadableImage>
+
+<!---------------------------------->
+<!-- IMAGEN DEL CREADOR DEL JUEGO -->
+<!---------------------------------->
+
+<reloadableImage mode="commonlayout" type="manufacturer" alpha="0" x="1700" y="1002" xOrigin="right" yOrigin="center" maxWidth="160" maxHeight="160" alpha="0" layer="12">
+  <onEnter><set duration=".3"><animate type="alpha" to="1" algorithm="easeinquadratic"/><animate type="yoffset" from="50" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="yoffset" from="0" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+</reloadableImage>
+
+<!------------------------------->
+<!-- AÑO DEL JUEGO -->
+<!------------------------------->
+
+<reloadableText  mode="layout" type="year" x="1805" y="1000" xOrigin="center" yOrigin="center" alpha="0" font="Aurora_condblack.ttf" fontSize="38" fontColor="dfdbdc" layer="12">
+  <onEnter><set duration=".3"><animate type="alpha" to="1" algorithm="easeinquadratic"/><animate type="yoffset" from="50" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="yoffset" from="0" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+</reloadableText>
+<image src="year_image.png" x="1752" y="980" alpha="0" layer="11">
+  <onEnter><set duration=".3"><animate type="alpha" to="1" algorithm="easeinquadratic"/><animate type="yoffset" from="50" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="yoffset" from="0" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+</image>
+
+<!------------------------>
+<!-- CARATULA DEL JUEGO -->
+<!------------------------>
+
+<reloadableImage mode="layout" type="artwork_front" alpha="0" x="center" y="center" yOrigin="center" xOrigin="center" Width="460" Height="626" layer="11">
+  <onEnter><set duration=".3"><animate type="alpha" to="1" algorithm="easeinquadratic"/><animate type="width" from="220" to="500" algorithm="easeinquadratic"/></set><set duration=".2"><animate type="width" from="500" to="460" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+  <onHighlightEnter menuIndex="0"><set duration=".2"><animate type="alpha" from="0" to="1" algorithm="easeinquadratic"/><animate type="width" from="232" to="480" algorithm="easeinquadratic"/></set><set duration=".2"><animate type="width" from="480" to="460" algorithm="easeinquadratic"/></set></onHighlightEnter>
+  <onHighlightExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="width" from="460" to="232" algorithm="easeinquadratic"/></set></onHighlightExit>
+</reloadableImage>
+<reloadableImage mode="systemlayout" type="covercristal" alpha="0" x="center" y="center" yOrigin="center" xOrigin="center" alpha="0" layer="12">
+  <onEnter><set duration=".3"><animate type="alpha" to="1" algorithm="easeinquadratic"/><animate type="width" from="226" to="506" algorithm="easeinquadratic"/></set><set duration=".2"><animate type="width" from="506" to="466" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+  <onHighlightEnter menuIndex="0"><set duration=".2"><animate type="alpha" to="1" algorithm="easeinquadratic"/><animate type="width" from="238" to="486" algorithm="easeinquadratic"/></set><set duration=".2"><animate type="width" from="486" to="466" algorithm="easeinquadratic"/></set></onHighlightEnter>
+  <onHighlightExit menuIndex="0"><set duration=".1"><animate type="alpha" to="0" algorithm="easeinquadratic"/><animate type="width" from="466" to="238" algorithm="easeinquadratic"/></set></onHighlightExit>
+</reloadableImage>
+
+<!------------------------------->
+<!-- IMAGEN DE FONDO DEL JUEGO -->
+<!------------------------------->
+
+<reloadableImage mode="layout" type="background" alpha="0" x="0" y="0" width="1920" height="1080" containerX="0" containerY="0" containerWidth="1920" containerHeight="698" layer="1">
+  <onEnter><set duration=".3"><animate type="nop"/></set><set duration=".4"><animate type="alpha" to=".1" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onExit><set duration=".4"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+  <onHighlightEnter menuIndex="0"><set duration=".4"><animate type="alpha" to=".1" algorithm="easeinquadratic"/></set></onHighlightEnter>
+  <onHighlightExit menuIndex="0"><set duration=".2"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onHighlightExit>
+</reloadableImage>
+<reloadableImage mode="layout" type="background" alpha="0" x="0" y="0" width="1920" height="1080" containerX="0" containerY="698" containerWidth="1920" containerHeight="381" layer="9">
+  <onEnter><set duration=".3"><animate type="nop"/></set><set duration=".4"><animate type="alpha" to=".1" algorithm="easeinquadratic"/></set></onMenuEnter>
+  <onExit><set duration=".4"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+  <onHighlightEnter menuIndex="0"><set duration=".4"><animate type="alpha" to=".1" algorithm="easeinquadratic"/></set></onHighlightEnter>
+  <onHighlightExit menuIndex="0"><set duration=".2"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onHighlightExit>
+</reloadableImage>
+<reloadableImage mode="systemlayout" type="cover_reflection" alpha="0" x="0" y="0" height="stretch" width="stretch" layer="8">
+  <onEnter><set duration=".01"><animate type="alpha" from="0" to="1"/></set></onEnter>
+  <onExit><set duration=".2"><animate type="alpha" from="1" to="1" algorithm="easeinquadratic"/></set><set duration=".1"><animate type="alpha" from="1" to="0" algorithm="easeinquadratic"/></set></onExit>
+</reloadableImage>
+
+<!---------------------------------->
+<!-- RUEDA DE LOGOTIPOS DE JUEGOS -->
+<!---------------------------------->
+
+<menu mode="layout" type="custom" imageType="artwork_front2" scrollTime=".4" alpha="0" scrollAcceleration=".04" orientation="horizontal">
+  <itemDefaults x="center" y="center"  xOrigin="center" yOrigin="center" alpha="0" width="232" spacing="10" reflectionDistance="2" reflection="bottom" reflectionScale="1" reflectionAlpha=".5" layer="7"/>
+    <item xOffset="-1077" alpha="0"/><!-- Elemento 01 -->
+    <item xOffset="-837" alpha="1"><!-- Elemento 02 -->
+      <onEnter><set duration=".3"><animate type="alpha" from="0" to="1"/><animate type="width" from="116" to="232"/><animate type="xoffset" from="-407" to="-837"/></set></onEnter>
+      <onExit><set duration=".29"><animate type="alpha" to="0"/></set><set duration=".01"><animate type="width" from="232" to="116"/><animate type="xoffset" from="-837" to="-407"/></set></onExit>
+    </item>
+    <item xOffset="-597" alpha="1"> <!-- Elemento 03 -->
+      <onEnter><set duration=".3"><animate type="alpha" from="0" to="1"/><animate type="width" from="116" to="232"/><animate type="xoffset" from="-287" to="-597"/></set></onEnter>
+      <onExit><set duration=".29"><animate type="alpha" to="0"/></set><set duration=".01"><animate type="width" from="232" to="116"/><animate type="xoffset" from="-597" to="-287"/></set></onExit>
+    </item>
+    <item xOffset="-357" alpha="1"> <!-- Elemento 04 -->
+      <onEnter><set duration=".3"><animate type="alpha" from="0" to="1"/><animate type="width" from="116" to="232"/><animate type="xoffset" from="-167" to="-357"/></set></onEnter>
+      <onExit><set duration=".29"><animate type="alpha" to="0"/></set><set duration=".01"><animate type="width" from="232" to="116"/><animate type="xoffset" from="-357" to="-167"/></set></onExit>
+    </item>
+    <item selected="true" alpha="0" width="232"/>
+    <item xOffset="357" alpha="1"> <!-- Elemento 05 -->
+      <onEnter><set duration=".3"><animate type="alpha" from="0" to="1"/><animate type="width" from="116" to="232"/><animate type="xoffset" from="167" to="357"/></set></onEnter>
+      <onExit><set duration=".29"><animate type="alpha" to="0"/></set><set duration=".01"><animate type="width" from="232" to="116"/><animate type="xoffset" from="357" to="167"/></set></onExit>
+    </item>
+    <item xOffset="597" alpha="1"> <!-- Elemento 06 -->
+      <onEnter><set duration=".3"><animate type="alpha" from="0" to="1"/><animate type="width" from="116" to="232"/><animate type="xoffset" from="287" to="597"/></set></onEnter>
+      <onExit><set duration=".29"><animate type="alpha" to="0"/></set><set duration=".01"><animate type="width" from="232" to="116"/><animate type="xoffset" from="597" to="287"/></set></onExit>
+    </item>
+    <item xOffset="837" alpha="1"> <!-- Elemento 04 -->
+      <onEnter><set duration=".3"><animate type="alpha" from="0" to="1"/><animate type="width" from="116" to="232"/><animate type="xoffset" from="407" to="837"/></set></onEnter>
+      <onExit><set duration=".29"><animate type="alpha" to="0"/></set><set duration=".01"><animate type="width" from="232" to="116"/><animate type="xoffset" from="837" to="407"/></set></onExit>
+    </item>
+    <item xOffset="1077" alpha="0"/>
+    </menu>
+</layout>

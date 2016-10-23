@@ -1,3 +1,4 @@
-./core
+core/*
 meta.db
 RetroFE.lnk
+log.txt
